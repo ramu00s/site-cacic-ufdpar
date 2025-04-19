@@ -1,0 +1,302 @@
+/* Customização do cabeçalho da página */
+#fixed-header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo à esquerda */
+#fixed-header img {
+    position: absolute;
+    left: 40px;
+}
+
+/* Título centralizado */
+#fixed-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Navegação à direita */
+#fixed-header nav {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    gap: 25px;
+}
+
+/* Links de navegação */
+#fixed-header nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+#fixed-header nav a:hover {
+    color: #007BFF;
+}
+
+/* Customização do link flutuante do Whatsapp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+.whatsapp-float img {
+    width: 80px;
+    height: auto;
+}
+
+/* Customização do carrossel */
+.carousel-inner img {
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Customização das tags <h5> do carrossel */
+.titulo-slide-carrossel {
+    color: black;
+    font-size: x-large;
+    background-color: #E4DACE;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+/* Customização das tags <p> do carrossel */
+.pedit {
+    color: black;
+    font-size: medium;
+    background-color: pink;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+/* Customização da section "Sobre nós" */
+.section-sn {
+    padding: 40px 20px;
+    background-color: #e4dace;
+}
+
+/* Customização do cabeçalho da sessão "Sobre nós" */
+.section-title {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Customização do conteúdo img */
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+/* Customização da imagem */
+.content img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Customização da caixa de texto */
+.text-box {
+    flex: 1;
+    text-align: left;
+}
+
+/* Ajuste nas imagens para ficarem responsivas */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo base dos botões */
+.button-links-importantes {
+    background-color: rgb(63, 63, 255);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+.button-links-importantes:hover {
+    background-color: rgb(38, 168, 38);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.button-links-importantes:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Customização da section "Links Importantes" */
+.section-li {
+    padding: 40px 20px;
+}
+
+/* Container de todos os cards */
+.card-group2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Cada card */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagem dentro do card */
+.card img.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Corpo do card */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Seção com imagem de fundo */
+#links-importantes {
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+    background-color: #fff;
+}
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.10;
+    z-index: 0;
+}
+#links-importantes > *:not(.background-img) {
+    position: relative;
+    z-index: 1;
+}
+
+/* RESPONSIVIDADE GERAL */
+@media (max-width: 768px) {
+    /* Cabeçalho responsivo */
+    #fixed-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    #fixed-header img {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    #fixed-header h3 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    #fixed-header nav {
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    #fixed-header nav a {
+        font-size: 0.9rem;
+    }
+
+    /* Seção sobre nós responsiva */
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-box {
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    /* Carrossel menor */
+    .carousel-inner img {
+        height: 250px;
+    }
+
+    .titulo-slide-carrossel,
+    .pedit {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    /* Cards em coluna */
+    .card-group2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    /* Botão menor */
+    .button-links-importantes {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
